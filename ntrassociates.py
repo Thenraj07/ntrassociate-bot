@@ -10,7 +10,7 @@ logging.basicConfig(filename='trades.log', level=logging.INFO,
 
 def initialize_mt5():
     """Initialize MetaTrader5 connection."""
-    if not mt5.initialize():
+    if not mt5.initialize(login=204242456, server="Exness-MT5Trial7", password="Ntr@60097"):
         logging.error("MT5 initialization failed")
         return False
     logging.info("MT5 initialized successfully")
